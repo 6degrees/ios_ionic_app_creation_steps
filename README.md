@@ -8,7 +8,7 @@ The steps are grouped as follows:
  * Provisioning Steps
 
 
-### REQUIREMENTS
+#### REQUIREMENTS
 You will need the following to complete the task:
   * OpenSSL (to create CSRs and keys)
   * Development environment:
@@ -26,7 +26,7 @@ You will need the following to complete the task:
 ## App Development Stage
 Here are the steps to start developing your app
 
-### Tips for App Development Stage
+#### Tips for App Development Stage
 These are some tips that you might or might not need while developing your application
 * In development environment, while developing your API:
     * Use HTTPS for iOS as HTTP is not accepted.
@@ -40,7 +40,7 @@ These steps are the minimum requirements for provisioning (for usage or testing)
 * Step 1
 * Step 2
 
-### Tips and Tricks for App Provisioning
+#### Tips and Tricks for App Provisioning
 
 
 ## MAINTAINERS
