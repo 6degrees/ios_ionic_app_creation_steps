@@ -40,7 +40,7 @@ These steps are the minimum requirements for provisioning (for usage or testing)
 * Step 1
 * Step 2
 
-#### Tips and Tricks for App Provisioning
+#### Tips and Tricks for App Provisioning 
 
 
 ## MAINTAINERS
