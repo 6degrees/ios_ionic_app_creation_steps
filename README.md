@@ -11,7 +11,7 @@ The steps are grouped as follows:
 
 
 ## REQUIREMENTS
- ------------
+ 
 
  You will need the following to complete the task:
   * OpenSSL (to create CSRs and keys)
