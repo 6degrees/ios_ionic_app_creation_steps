@@ -4,9 +4,8 @@
 This repository serves as personal notes on the steps required to create iOS
 apps through ionic Framework.  
 The steps are grouped as follows:
- * Development Steps
- * Provisioning Steps
-
+* Development Steps
+* Provisioning Steps
 
 #### REQUIREMENTS
 You will need the following to complete the task:
@@ -25,14 +24,17 @@ You will need the following to complete the task:
     * Atom
     * Brackets
     * Notepad++
-* Mac Machine (or Mac Virtual Machine ;)), to load your IPA into developer account
-
-
+* Mac Machine (or Mac Virtual Machine ;)), to load your IPA into developer account and test on iOS Simulator
+* Android Stuff for Android deployement and testing
+    * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)
+    * [Android Studio](https://developer.android.com/studio/index.html)
+    * [Updated Android SDK tools](https://developer.android.com/studio/intro/update.html)
+* Splash Screen and Icons
 
 ## App Development Stage
 Here are the steps to start developing your app
-* For Typescript backend `ionic start yourprojectname`
-* For JavaScript backend `ionic start yourprojectname –type ionic1`
+* For Typescript backend `ionic start yourprojectname tabs`
+* For JavaScript backend `ionic start yourprojectname tabs –type ionic1`
   (for JS support, ionic 2 is strictly Typescript and most of us hate that)
 
 #### Tips for App Development Stage
@@ -54,10 +56,11 @@ These steps are the minimum requirements for provisioning (for usage or testing)
 
 ## References
 * [ionic Framework Docs](https://ionicframework.com/docs)
+    * [ionic deployment manual](http://ionicframework.com/docs/intro/deploying/)
+* [AngularJS Basics](https://www.w3schools.com/angular/default.asp)
+* [AngularJS Docs](https://docs.angularjs.org/api)
 * []()
 * []()
-* []()
-
 
 ## MAINTAINERS
 #### Current Maintainers:
@@ -67,7 +70,6 @@ These steps are the minimum requirements for provisioning (for usage or testing)
 #### Sponsored by:
 * 6 Degrees Technologies - http://www.6d.com.sa  
   Specialized in, simply, Technologies.
-
 
 ## COPYRIGHTS
 No copyrights at all, I just collected all of this from all over the internet (which is a public place) and published it here for my own use and for your use.
