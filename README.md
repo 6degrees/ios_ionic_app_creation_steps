@@ -16,13 +16,13 @@ The steps are grouped as follows:
  You will need the following to complete the task:
   * OpenSSL (to create CSRs and keys)
   * Development environment:
-  - Ionic Creator Account (if you want to develop through the cloud) or
-  - Simply install the following and start developing from your machine:
-  -- Node.JS
-  -- ionic 1 (for js support, ionic 2 is strictly TypeScript and most of us hate that)
-  -- cordova (for native functions implementation)
+  ** Ionic Creator Account (if you want to develop through the cloud) or
+  ** Simply install the following and start developing from your machine:
+  *** Node.JS
+  *** ionic 1 (for JS support, ionic 2 is strictly TypeScript and most of us hate that)
+  *** cordova (for native functions implementation)
   * Apple Developer Account ($99/yr) obviously to upload and test your application
-  * Good text editor (Atom, Brakets, Notepad++)
+  * Good text editor (Atom, Brackets, Notepad++)
 
 
 
