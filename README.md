@@ -1,6 +1,6 @@
 # iOS App Creation Steps through ionicFramework
 
-## INTRODUCTION
+#### INTRODUCTION
 This repository serves as personal notes on the steps required to create iOS
 apps through ionicFramework.  
 The steps are grouped as follows:
@@ -8,7 +8,7 @@ The steps are grouped as follows:
  * Provisioning Steps
 
 
-## REQUIREMENTS
+### REQUIREMENTS
 You will need the following to complete the task:
   * OpenSSL (to create CSRs and keys)
   * Development environment:
@@ -24,7 +24,7 @@ You will need the following to complete the task:
 
 
 
-## App Development Tips
+##### App Development Tips
 These are some tips that you might or might not need while developing your application
 * In development enviornoment, while developing your API:
     * Use HTTPS for iOS as HTTP is not accepted.
