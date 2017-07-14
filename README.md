@@ -40,15 +40,15 @@ These steps are the minimum requirements for provisioning (for usage or testing)
 * Step 1
 * Step 2
 
-#### Tips and Tricks for App Provisioning
+#### Tips and Tricks for App Provisions 
 
 
 ## MAINTAINERS
-#### Current maintainers:
+#### Current Maintainers:
 * **Mohannad F. Otaibi** (@buFai7an) - http://www.mohannadotaibi.com
 * **Your name?** - email me at mohannadotaibi + gmail.com
 
-#### sponsored by:
+#### Sponsored by:
 * 6 Degrees Technologies - http://www.6d.com.sa  
   Specialized in, simply, Technologies.
 
