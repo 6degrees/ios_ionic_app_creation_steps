@@ -44,11 +44,11 @@ These steps are the minimum requirements for provisioning (for usage or testing)
 
 
 ## MAINTAINERS
-Current maintainers:
-* Mohannad F. Otaibi (@buFai7an) - http://www.mohannadotaibi.com
-* Your name? - email me at mohannadotaibi + gmail.com
+#### Current maintainers:
+* **Mohannad F. Otaibi** (@buFai7an) - http://www.mohannadotaibi.com
+* **Your name?** - email me at mohannadotaibi + gmail.com
 
-This project has been sponsored by:
+#### sponsored by:
 * 6 Degrees Technologies - http://www.6d.com.sa  
   Specialized in, simply, Technologies.
 
