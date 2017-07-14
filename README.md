@@ -28,6 +28,16 @@ The steps are grouped as follows:
 
 
 
+  App Development Tips
+  -----------
+
+  These are some tips that you might or might not need while developing your application
+  * In development enviornoment, while developing your API:
+      * Use HTTPS for iOS as HTTP is not accepted.
+      * add the following code to your PHP files to enable cross-origin requests:
+      ```PHP
+      header("Access-Control-Allow-Origin: *");
+      ```
 
 
   MAINTAINERS
