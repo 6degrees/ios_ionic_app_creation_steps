@@ -1,6 +1,6 @@
 # iOS App Creation Steps through ionicFramework
 
-INTRODUCTION
+## INTRODUCTION
 ------------
 
 This repository serves as personal notes on the steps required to create iOS
@@ -10,7 +10,7 @@ The steps are grouped as follows:
  * Provisioning Steps
 
 
- REQUIREMENTS
+## REQUIREMENTS
  ------------
 
  You will need the following to complete the task:
@@ -28,7 +28,7 @@ The steps are grouped as follows:
 
 
 
-  App Development Tips
+## App Development Tips
   -----------
 
   These are some tips that you might or might not need while developing your application
@@ -40,7 +40,7 @@ The steps are grouped as follows:
       ```
 
 
-  MAINTAINERS
+## MAINTAINERS
   -----------
 
   Current maintainers:
