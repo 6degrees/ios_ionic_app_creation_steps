@@ -10,37 +10,53 @@ The steps are grouped as follows:
 
 #### REQUIREMENTS
 You will need the following to complete the task:
-  * OpenSSL (to create CSRs and keys)
-  * Development environment:
-      * Ionic Creator Account (if you want to develop through the cloud) or
-      * Simply install the following and start developing from your machine:
-          * Node.JS
-          * Ionic 1 (for JS support, ionic 2 is strictly Typescript and most of us hate that)
-          * Cordova (for native functions implementation)
-  * Apple Developer Account ($99/yr) obviously to upload and test your application
-  * Good text editor (Atom, Brackets, Notepad++)
-  * Mac Machine (or Mac Virtual Machine ;)), to load your IPA into developer account
+* OpenSSL (to create CSRs and keys)
+* Development environment:
+    * Ionic Creator Account (if you want to develop through the cloud) or
+    * Simply install the following and start developing from your machine:
+        * [Node.JS](https://nodejs.org/en/)
+        * [Ionic](http://ionicframework.com/)
+        * Cordova (for native functions implementation)
+        ```command-line
+        npm install -g ionic cordova
+        ```
+* Apple Developer Account ($99/yr) obviously to upload and test your application
+* Good text editor
+    * Atom
+    * Brackets
+    * Notepad++
+* Mac Machine (or Mac Virtual Machine ;)), to load your IPA into developer account
 
 
 
 ## App Development Stage
 Here are the steps to start developing your app
+* For Typescript backend `ionic start yourprojectname`
+* For JavaScript backend `ionic start yourprojectname –type ionic1`
+  (for JS support, ionic 2 is strictly Typescript and most of us hate that)
 
 #### Tips for App Development Stage
 These are some tips that you might or might not need while developing your application
 * In development environment, while developing your API:
     * Use HTTPS for iOS as HTTP is not accepted.
     * add the following code to your PHP files to enable cross-origin requests:
-```PHP
-header("Access-Control-Allow-Origin: *");
-```
+    ```PHP
+    header("Access-Control-Allow-Origin: *");
+    ```
+    * to start (test) your app `ionic serve`
 
 ## App Provisioning Stage
 These steps are the minimum requirements for provisioning (for usage or testing) your app.
 * Step 1
 * Step 2
 
-#### Tips and Tricks for App Provisions 
+#### Tips and Tricks for App Provisions
+
+## References
+* [ionic Framework Docs](https://ionicframework.com/docs)
+* []()
+* []()
+* []()
 
 
 ## MAINTAINERS
