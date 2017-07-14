@@ -2,7 +2,7 @@
 
 #### INTRODUCTION
 This repository serves as personal notes on the steps required to create iOS
-apps through ionicFramework.  
+apps through ionic Framework.  
 The steps are grouped as follows:
  * Development Steps
  * Provisioning Steps
@@ -15,7 +15,7 @@ You will need the following to complete the task:
       * Ionic Creator Account (if you want to develop through the cloud) or
       * Simply install the following and start developing from your machine:
           * Node.JS
-          * Ionic 1 (for JS support, ionic 2 is strictly TypeScript and most of us hate that)
+          * Ionic 1 (for JS support, ionic 2 is strictly Typescript and most of us hate that)
           * Cordova (for native functions implementation)
   * Apple Developer Account ($99/yr) obviously to upload and test your application
   * Good text editor (Atom, Brackets, Notepad++)
@@ -23,15 +23,24 @@ You will need the following to complete the task:
 
 
 
+## App Development Stage
+Here are the steps to start developing your app
 
-##### App Development Tips
+### Tips for App Development Stage
 These are some tips that you might or might not need while developing your application
-* In development enviornoment, while developing your API:
+* In development environment, while developing your API:
     * Use HTTPS for iOS as HTTP is not accepted.
     * add the following code to your PHP files to enable cross-origin requests:
 ```PHP
 header("Access-Control-Allow-Origin: *");
 ```
+
+## App Provisioning Stage
+These steps are the minimum requirements for provisioning (for usage or testing) your app.
+* Step 1
+* Step 2
+
+### Tips and Tricks for App Provisioning
 
 
 ## MAINTAINERS
