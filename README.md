@@ -51,3 +51,7 @@ Current maintainers:
 This project has been sponsored by:
 * 6 Degrees Technologies - http://www.6d.com.sa  
   Specialized in, simply, Technologies.
+
+
+## COPYRIGHTS
+No copyrights at all, I just collected all of this from all over the internet (which is a public place) and published it here for my own use and for your use.
