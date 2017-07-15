@@ -20,16 +20,51 @@ You will need the following to complete the task:
         npm install -g ionic cordova
         ```
 * Apple Developer Account ($99/yr) obviously to upload and test your application
+* Google Console account ($25/yr)
 * Good text editor
     * Atom
     * Brackets
     * Notepad++
 * Mac Machine (or Mac Virtual Machine ;)), to load your IPA into developer account and test on iOS Simulator
+    * an [App Specific Password](https://appleid.apple.com) if you use two factor authentication on your account
 * Android Stuff for Android deployement and testing
     * [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)
     * [Android Studio](https://developer.android.com/studio/index.html)
     * [Updated Android SDK tools](https://developer.android.com/studio/intro/update.html)
 * Splash Screen and Icons
+
+## Take note of
+#### for IOS
+* Your apple developer account id and Password
+* App Identifier Name
+* App Prefix (not sure if it is important)
+* App Name
+* Generate a private RSA Key `openssl genrsa -out f6sny.key 2048`
+* Create a CSR `openssl req -new -key f6sny.key -out f6sny.certSigningRequest`
+    * Do not Enter Email Address
+* Download your certificate from apple developer website
+* Convert the Certificate to a P12 File
+```command-line
+openssl x509 -inform DER -outform PEM -in ios_distribution.cer -out ios_distribution.cer.pem
+openssl pkcs12 -export -inkey f6sny.key -in ios_distribution.cer.pem -out Certificates.p12
+```
+    * Choose and remember password for the p12 certificate (will be used in creator.ionic page)
+* Develop your artwork using [iOS 10 App Icon Template PSD/Sketch](http://www.everyinteraction.com/resources/ios-10-app-icon-template-psd-sketch/)
+* Prepare screenshots for iPad and iPhone
+* Prepare promotional text
+* Prepare description
+* Prepare search keywords
+* Prepare notes for apple review
+
+
+#### for android
+* Install JDK
+* create keystore
+    * `keytool -genkey -v -keystore f6sny.keystore -alias f6sny_app -keyalg RSA -keysize 2048 -validity 10000`
+    * memorize the Password
+* Not much else, I just used the keystore while compiling the app. Nothing in google playstore.
+* Just filled a profile for the app in google console and that was it.
+
 
 ## App Development Stage
 Here are the steps to start developing your app
