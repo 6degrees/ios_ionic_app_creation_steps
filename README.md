@@ -21,6 +21,21 @@ You will need the following to complete the task:
         ```
 * Apple Developer Account ($99/yr) obviously to upload and test your application
 * Google Console account ($25/yr)
+* Setup a Firebase (google) account for tracking crashes and making push requests
+    * take note of the Sender ID
+    * install firebase on your ionic
+    ```command-line
+    ionic cordova plugin add cordova-plugin-firebase
+    npm install --save @ionic-native/firebase
+    ```
+    * Install other cordova plugins
+    ```command-line
+    ionic cordova plugin add cordova-clipboard
+    npm install --save @ionic-native/clipboard
+    ionic cordova plugin add cordova-plugin-x-socialsharing
+    npm install --save @ionic-native/social-sharing
+
+    ```
 * Good text editor
     * Atom
     * Brackets
@@ -39,22 +54,7 @@ You will need the following to complete the task:
 * App Identifier Name
 * App Prefix (not sure if it is important)
 * App Name
-* Generate a private RSA Key `openssl genrsa -out f6sny.key 2048`
-* Create a CSR `openssl req -new -key f6sny.key -out f6sny.certSigningRequest`
-    * Do not Enter Email Address
-* Download your certificate from apple developer website
-* Convert the Certificate to a P12 File
-```command-line
-openssl x509 -inform DER -outform PEM -in ios_distribution.cer -out ios_distribution.cer.pem
-openssl pkcs12 -export -inkey f6sny.key -in ios_distribution.cer.pem -out Certificates.p12
-```
-    * Choose and remember password for the p12 certificate (will be used in creator.ionic page)
-* Develop your artwork using [iOS 10 App Icon Template PSD/Sketch](http://www.everyinteraction.com/resources/ios-10-app-icon-template-psd-sketch/)
-* Prepare screenshots for iPad and iPhone
-* Prepare promotional text
-* Prepare description
-* Prepare search keywords
-* Prepare notes for apple review
+*
 
 
 #### for android
@@ -84,8 +84,30 @@ These are some tips that you might or might not need while developing your appli
 
 ## App Provisioning Stage
 These steps are the minimum requirements for provisioning (for usage or testing) your app.
-* Step 1
-* Step 2
+Generate a private RSA Key `openssl genrsa -out f6sny.key 2048`
+* Create a CSR `openssl req -new -key f6sny.key -out f6sny.certSigningRequest`
+    * Do not Enter Email Address
+* Download your certificate from apple developer website
+* Convert the Certificate to a P12 File
+```command-line
+openssl x509 -inform DER -outform PEM -in ios_distribution.cer -out ios_distribution.cer.pem
+openssl pkcs12 -export -inkey f6sny.key -in ios_distribution.cer.pem -out Certificates.p12
+```
+    * Choose and remember password for the p12 certificate (will be used in creator.ionic page)
+* Create provisioning profile
+* Download your ipa from ionic
+* Create app in itunesconnect
+* open xCode
+* open application loader and upload your file
+* head to itunes connect and finish the write-ups
+* submit for review
+* Develop your artwork using [iOS 10 App Icon Template PSD/Sketch](http://www.everyinteraction.com/resources/ios-10-app-icon-template-psd-sketch/)
+* Prepare screenshots for iPad and iPhone
+* Prepare promotional text
+* Prepare description
+* Prepare search keywords
+* Prepare notes for apple review
+* Wait 3 days for review
 
 #### Tips and Tricks for App Provisions
 
