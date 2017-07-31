@@ -21,6 +21,10 @@ You will need the following to complete the task:
         ```
 * Apple Developer Account ($99/yr) obviously to upload and test your application
 * Google Console account ($25/yr)
+* For push notifications, checkout the following:
+	* https://onesignal.com
+	* firebase
+	* Ionic Cloud
 * Setup a Firebase (google) account for tracking crashes and making push requests
     * take note of the Sender ID
     * install firebase on your ionic
@@ -34,6 +38,10 @@ You will need the following to complete the task:
     npm install --save @ionic-native/clipboard
     ionic cordova plugin add cordova-plugin-x-socialsharing
     npm install --save @ionic-native/social-sharing
+	npm install @ionic/cloud-angular --save
+	cordova plugin add ionic-plugin-deploy --save
+	ionic cordova plugin add cordova-plugin-actionsheet
+	npm install --save @ionic-native/action-sheet
 
     ```
 * Good text editor
@@ -81,10 +89,12 @@ These are some tips that you might or might not need while developing your appli
     header("Access-Control-Allow-Origin: *");
     ```
     * to start (test) your app `ionic serve`
+	* to rtl support, start by setting the html `lang` and `dir` attributes of the html element
 
 ## App Provisioning Stage
 These steps are the minimum requirements for provisioning (for usage or testing) your app.
-Generate a private RSA Key `openssl genrsa -out f6sny.key 2048`
+
+* Generate a private RSA Key `openssl genrsa -out f6sny.key 2048`
 * Create a CSR `openssl req -new -key f6sny.key -out f6sny.certSigningRequest`
     * Do not Enter Email Address
 * Download your certificate from apple developer website
@@ -96,12 +106,14 @@ openssl pkcs12 -export -inkey f6sny.key -in ios_distribution.cer.pem -out Certif
     * Choose and remember password for the p12 certificate (will be used in creator.ionic page)
 * Create provisioning profile
 * Download your ipa from ionic
+	* To automatically create your IPA or APK frol CLI, use `ionic cordova build --release android` (replace android with ios for iphone)
 * Create app in itunesconnect
 * open xCode
 * open application loader and upload your file
 * head to itunes connect and finish the write-ups
 * submit for review
 * Develop your artwork using [iOS 10 App Icon Template PSD/Sketch](http://www.everyinteraction.com/resources/ios-10-app-icon-template-psd-sketch/)
+	* Or, simply create your `splash.png` and `icon.png`, place them in the resources folder and run `ionic cordova resources`
 * Prepare screenshots for iPad and iPhone
 * Prepare promotional text
 * Prepare description
@@ -109,15 +121,21 @@ openssl pkcs12 -export -inkey f6sny.key -in ios_distribution.cer.pem -out Certif
 * Prepare notes for apple review
 * Wait 3 days for review
 
+> Reference: [Ionic Publishing Guide](http://ionicframework.com/docs/v1/guide/publishing.html)
+
+
+
+
 #### Tips and Tricks for App Provisions
+* Test your app on emulator `ionic build android && ionic run android`
 
 ## References
 * [ionic Framework Docs](https://ionicframework.com/docs)
     * [ionic deployment manual](http://ionicframework.com/docs/intro/deploying/)
 * [AngularJS Basics](https://www.w3schools.com/angular/default.asp)
 * [AngularJS Docs](https://docs.angularjs.org/api)
-* []()
-* []()
+* [Ionic Publishing Guide](http://ionicframework.com/docs/v1/guide/publishing.html)
+* [Ionic Framework: A definitive 10,000 word guide](https://www.pluralsight.com/guides/front-end-javascript/ionic-framework-a-definitive-10-000-word-guide)
 
 ## MAINTAINERS
 #### Current Maintainers:
