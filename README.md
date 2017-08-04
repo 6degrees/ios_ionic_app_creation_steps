@@ -6,6 +6,7 @@ apps through ionic Framework.
 The steps are grouped as follows:
 * Development Steps
 * Provisioning Steps
+* Packageing Steps
 
 #### REQUIREMENTS
 You will need the following to complete the task:
@@ -48,6 +49,7 @@ You will need the following to complete the task:
     * Atom
     * Brackets
     * Notepad++
+	* MS Visual Code
 * Mac Machine (or Mac Virtual Machine ;)), to load your IPA into developer account and test on iOS Simulator
     * an [App Specific Password](https://appleid.apple.com) if you use two factor authentication on your account
 * Android Stuff for Android deployement and testing
@@ -80,16 +82,7 @@ Here are the steps to start developing your app
 * For JavaScript backend `ionic start yourprojectname tabs –type ionic1`
   (for JS support, ionic 2 is strictly Typescript and most of us hate that)
 
-#### Tips for App Development Stage
-These are some tips that you might or might not need while developing your application
-* In development environment, while developing your API:
-    * Use HTTPS for iOS as HTTP is not accepted.
-    * add the following code to your PHP files to enable cross-origin requests:
-    ```PHP
-    header("Access-Control-Allow-Origin: *");
-    ```
-    * to start (test) your app `ionic serve`
-	* to rtl support, start by setting the html `lang` and `dir` attributes of the html element
+
 
 ## App Provisioning Stage
 These steps are the minimum requirements for provisioning (for usage or testing) your app.
@@ -106,7 +99,7 @@ openssl pkcs12 -export -inkey f6sny.key -in ios_distribution.cer.pem -out Certif
     * Choose and remember password for the p12 certificate (will be used in creator.ionic page)
 * Create provisioning profile
 * Download your ipa from ionic
-	* To automatically create your IPA or APK frol CLI, use `ionic cordova build --release android` (replace android with ios for iphone)
+	* To automatically create your IPA or APK from CLI, use `ionic cordova build --release android` (replace android with ios for iphone)
 * Create app in itunesconnect
 * open xCode
 * open application loader and upload your file
@@ -120,22 +113,65 @@ openssl pkcs12 -export -inkey f6sny.key -in ios_distribution.cer.pem -out Certif
 * Prepare search keywords
 * Prepare notes for apple review
 * Wait 3 days for review
+* Utilize Ionic Delpoy to save some time [Get Started With Ionic Services: Deploy](https://code.tutsplus.com/tutorials/get-started-with-ionic-services-deploy--cms-28827)
 
 > Reference: [Ionic Publishing Guide](http://ionicframework.com/docs/v1/guide/publishing.html)
 
 
 
+## Build your app
+#### Through ionic cloud
+* Create a security profile in your cloud account [Security Profiles](https://docs.ionic.io/services/profiles/)
+* Request the build
+	* iOS `ionic package build ios --profile PROFILE_TAG --prod --release` (ensure profile tag is all lowercase)
+	* Android `ionic package build android --profile PROFILE_TAG --prod --release`
+* Check build status `ionic package list`
+* Download your build `ionic package download BUILD_ID` (will download to your app directory)
 
-#### Tips and Tricks for App Provisions
-* Test your app on emulator `ionic build android && ionic run android`
+#### Through CLI
+* For Android
+It is a normal process, just check the docs
+* For iOS
+You would need a mac machine, maybe through a virtual box?
+
+
+## Tips and Tricks
+#### App Development
+These are some tips that you might or might not need while developing your application
+* In development environment, while developing your API:
+    * Use HTTPS for iOS as HTTP is not accepted.
+    * add the following code to your PHP files to enable cross-origin requests:
+    ```PHP
+    header("Access-Control-Allow-Origin: *");
+    ```
+    * to start (test) your app `ionic serve`
+	* to rtl support, start by setting the html `lang` and `dir` attributes of the html element
+
+
+#### App Provisioning
+* Test your app on emulator `ionic cordova build android` and `ionic cordova run android`
+* If any problem encountered during emulation or build, try re-build
+  ```command-line
+	  ionic cordova platform rm android
+	  ionic cordova platform add android
+  ```
+  * Remove development plugins `ionic cordova plugin rm cordova-plugin-console`
+* Make sure to configure `config.xml` correctly, refer to: [cordova apache](http://cordova.apache.org/docs/en/latest/config_ref/index.html) for details.
+	* name attribute would be tha apk name and ipa name, and might be used for store title
+
+
+
+
+
 
 ## References
-* [ionic Framework Docs](https://ionicframework.com/docs)
+> [ionic Framework Docs](https://ionicframework.com/docs)
     * [ionic deployment manual](http://ionicframework.com/docs/intro/deploying/)
-* [AngularJS Basics](https://www.w3schools.com/angular/default.asp)
-* [AngularJS Docs](https://docs.angularjs.org/api)
-* [Ionic Publishing Guide](http://ionicframework.com/docs/v1/guide/publishing.html)
-* [Ionic Framework: A definitive 10,000 word guide](https://www.pluralsight.com/guides/front-end-javascript/ionic-framework-a-definitive-10-000-word-guide)
+> [AngularJS Basics](https://www.w3schools.com/angular/default.asp)
+> [AngularJS Docs](https://docs.angularjs.org/api)
+> [Ionic Publishing Guide](http://ionicframework.com/docs/v1/guide/publishing.html)
+> [Ionic Framework: A definitive 10,000 word guide](https://www.pluralsight.com/guides/front-end-javascript/ionic-framework-a-definitive-10-000-word-guide)
+> [Creating a Sliding Introduction Component in Ionic 2 & 3](https://www.joshmorony.com/creating-a-sliding-introduction-component-in-ionic-2/)
 
 ## MAINTAINERS
 #### Current Maintainers:
